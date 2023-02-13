@@ -407,6 +407,8 @@ body {
   display: grid;
   grid-template-rows: 1fr 1fr;
   font-weight: var(--header-font-weight);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  position: relative;
 }
 
 .header-row {
@@ -512,8 +514,8 @@ h2 {
   background-color: var(--search-bar-color);
   padding: 0px 25px;
   display: grid;
-  gap: 40px;
-  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  grid-template-columns: 2.8fr 1fr;
 }
 
 .main-content-grid {
@@ -526,8 +528,9 @@ h2 {
 .main-content-grid h3 {
   font-size: calc(1.5vh + 1rem);
   grid-area: 1 / 1 / 2 / 3;
-  align-self: center
+  align-self: center;
   margin: 0px;
+  margin-bottom: -40px;
 }
 
 /* .main-content-grid > h3 {
@@ -544,7 +547,8 @@ h2 {
   border-radius: 10px;
   display: grid;
   grid-template: 4fr 1fr / 1fr;
-  gap: 20px;
+  gap: clamp(2rem, 4rem, 5vh);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .card.one {
@@ -592,5 +596,46 @@ h2 {
 .news-container {
   grid-area: 1 / 2 / 2 / 3;
   background-color: white;
-  padding: 20px;
+  padding: 0px;
+  background-color: var(--search-bar-color);
+  display: grid;
+  gap: 1.2rem;
+  grid-template: 10% 1fr 1fr / 1fr;
+}
+
+.news-container h3 {
+  font-size: calc(1.5vh + 1rem);
+  grid-area: 1 / 1 / 2 / 2;
+  align-self: center;
+  /* justify-self: center; */
+  margin: 0px;
+  margin-bottom: -40px;
+}
+
+.announcements-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: max(2vh, 2.3rem);
+  display: grid;
+  grid-template: repeat(auto-fit, minmax(95px, 1fr)) / 1fr;
+  gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.announcements-container h4 {
+  font-size: calc(var(--card-h3-font-size) * 0.78);
+  margin: 0px;
+  margin-bottom: 4px;
+}
+
+.announcements-container p {
+  font-size: clamp(0.85rem * 0.85, calc(0.55vw + 0.35rem) * 0.85, 3rem * 0.85);
+  margin: 0px;
+  margin-bottom: 12px;
+  color: rgb(99, 104, 109);
+}
+
+.announcement.one,
+.announcement.two {
+  border-bottom: solid 1px gray;
 }
