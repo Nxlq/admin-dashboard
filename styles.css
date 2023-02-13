@@ -457,7 +457,7 @@ body {
 }
 
 .pfp.profile-nav {
-  height: 50px;
+  height: clamp(3rem, 6.3vh, 7.5rem);
 }
 
 .search-container {
@@ -508,6 +508,10 @@ ul {
 h2 {
   font-size: 30px;
   padding-left: 10px;
+}
+
+h4 {
+  margin: 0px;
 }
 
 .main-content-container {
@@ -637,5 +641,45 @@ h2 {
 
 .announcement.one,
 .announcement.two {
+  border-bottom: solid 1px gray;
+}
+
+.trending-container {
+  display: grid;
+  grid-template: 10% 1fr / 1fr;
+  gap: 1.2rem;
+}
+
+.trending-container > h3 {
+  margin: 7rem 0px;
+}
+
+.trends {
+  padding: max(2vh, 2.3rem);
+  border-radius: 10px;
+  background-color: white;
+  display: grid;
+  grid-template: repeat(auto-fit, minmax(95px, 1fr)) / 1fr;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.trending {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.trending h4 {
+  font-size: clamp(1.2vh, 0.95rem, 1.2rem);
+}
+
+.trending span {
+  font-size: clamp(0.5rem * 0.95, calc(0.7vh + 0.45rem) * 0.95, 3.3rem * 0.95);
+  color: rgb(99, 104, 109);
+}
+
+.trending.one,
+.trending.two,
+.trending.three {
   border-bottom: solid 1px gray;
 }
