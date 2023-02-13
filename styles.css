@@ -493,7 +493,7 @@ svg {
 }
 
 img[src$=".svg"] {
-  height: 30px;
+  height: 2rem;
   width: auto;
 }
 
@@ -571,13 +571,13 @@ h2 {
 }
 
 .card p {
-  font-size: calc(1vh + 0.4rem);
+  font-size: clamp(0.85rem, 0.55vw + 0.35rem, 3rem);
   margin-top: 8px;
   color: rgb(99, 104, 109);
 }
 
 .card img {
-  height: 25px;
+  height: calc(1vh + 0.8rem);
   width: auto;
 }
 
