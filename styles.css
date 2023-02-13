@@ -407,7 +407,6 @@ body {
   display: grid;
   grid-template-rows: 1fr 1fr;
   font-weight: var(--header-font-weight);
-  /* box-shadow: rgba(17, 17, 26, 0.1) 500px 500px 0px 0px; */
 }
 
 .header-row {
@@ -520,7 +519,7 @@ h2 {
 .main-content-grid {
   display: grid;
   grid-template: 10% repeat(auto-fit, clamp(200px, 30%, 500px)) / 1fr 1fr;
-  gap: 35px;
+  gap: 1.2rem;
   /* background-color: var(--search-bar-color); */
 }
 
