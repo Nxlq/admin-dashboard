@@ -362,7 +362,8 @@ template {
 body {
   background-color: rgb(49, 57, 71);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .layout-container {
